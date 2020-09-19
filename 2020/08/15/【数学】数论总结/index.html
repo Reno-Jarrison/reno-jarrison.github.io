@@ -77,7 +77,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">1.3k</span>
+            <span class="post-count">1.5k</span>
         </span>
     </span>
 
@@ -86,7 +86,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">5 min</span>
+            <span class="post-count">6 min</span>
         </span>
     </span>
 </div>
@@ -105,51 +105,84 @@
 
 <p>​    将学到的亿点点数论知识作一个小结～</p>
 <a id="more"></a>
-
 <h2 id="§1-公式-amp-结论"><a href="#§1-公式-amp-结论" class="headerlink" title="§1 公式&amp;结论"></a>§1 公式&amp;结论</h2><ol>
 <li>费马小定理：若 $p$ 是素数且 $a\bot p$ ，则 $a^{p-1}\equiv 1\ (mod\ p)$ 。</li>
 <li>威尔逊定理： $p$ 是素数的充要条件是 $(p-1)!\equiv 1\ (mod\ p)$ 。</li>
 <li>欧拉定理：</li>
 <li>裴蜀定理：设 $a，b$ 是整数且 $Gcd(a,b)=d$ ，则对任意整数 $x，y$ ，不定方程 $ax+by=c$ 成立的充要条件是 $d|c$ ；裴蜀定理可推广到多个变量：对于不定方程 $a_1x_1+a_2x_2+\cdots+a_nx_n=c$ ，当且仅当 $Gcd(a_1,a_2,\cdots,a_n)|c$ 时，方程才有整数解。</li>
 <li>二次探测定理：若 $p$ 是素数 ，则方程 $x^2\equiv 1\ (mod\ p)$ 的解为 $x=1$ 或 $x=p-1$ 。</li>
-<li>设 $Fib(i)$ 为 $fibonacci$ 数列的第 $i$ 项，则 $Gcd(Fib(n),Fib(m))=Fib(Gcd(n,m))$。</li>
+<li>设 $Fib(i)$ 为 $fibonacci$ 数列的第 $i$ 项，则 $Gcd(Fib(n),Fib(m))=Fib(Gcd(n,m))$。 </li>
 </ol>
-<h2 id="§2-素数及其判定"><a href="#§2-素数及其判定" class="headerlink" title="§2 素数及其判定"></a>§2 素数及其判定</h2><h3 id="关于素数"><a href="#关于素数" class="headerlink" title="关于素数"></a>关于素数</h3><ol>
+<p><br></p>
+<h2 id="§2-素数及其判定"><a href="#§2-素数及其判定" class="headerlink" title="§2 素数及其判定"></a>§2 素数及其判定</h2><blockquote>
+<h3 id="关于素数"><a href="#关于素数" class="headerlink" title="关于素数"></a>关于素数</h3></blockquote>
+<ol>
 <li>素数是除了1和它本身外，没有其他约数的数；</li>
 <li>素数分布：不超过n的质数大约有 $\frac{n}{\ln n}$ 个，即每 $\ln n$ 个数中大约有一个素数；</li>
 <li>素数筛：1. $Eratosthenes$ 筛法： $O(n\log \log n)$ ；2. 欧拉筛： $O(n)$；</li>
 <li>素数判定：1. 试除法： $O(\sqrt n)$ ；2. $Miller-Rabin$ 测试 ： $O(\log^2n)$ 。</li>
 </ol>
-<h3 id="Miller-Rabin​素性测试"><a href="#Miller-Rabin​素性测试" class="headerlink" title="Miller-Rabin​素性测试"></a>Miller-Rabin​素性测试</h3><p>​    测试过程：</p>
+<blockquote>
+<h3 id="Miller-Rabin​素性测试"><a href="#Miller-Rabin​素性测试" class="headerlink" title="Miller-Rabin​素性测试"></a>Miller-Rabin​素性测试</h3></blockquote>
+<p>​    测试过程：</p>
 <ol>
 <li>选择随机数 $a$ 进行费马素性测试：若 $a^{n-1}\neq 1\ (mod\ n)$ ，则 $n$ 一定不是素数；</li>
 <li>利用二次探测定理：设 $k=n-1$，当 $a^k\equiv1\ (mod\ n)$ 时，判断 $a^{\frac k2}$ 是否为 $1$ 或 $n-1$，若不是，则 $n$ 一定不是素数；否则当 $k$ 为偶数且 $a^{\frac k2}\equiv1\ (mod\ n)$ 时，令 $k=k/2$ ，重复上述判断；</li>
 <li>单次测试的正确率大于 $\frac 34$ ，多次选择不同的随机数重复1、2步骤可以使错误概率降到极低。</li>
 </ol>
-<h3 id="反素数"><a href="#反素数" class="headerlink" title="反素数"></a>反素数</h3><p>​    暂鸽</p>
-<h2 id="§3-整除与因数分解"><a href="#§3-整除与因数分解" class="headerlink" title="§3 整除与因数分解"></a>§3 整除与因数分解</h2><h3 id="整除的一些性质"><a href="#整除的一些性质" class="headerlink" title="整除的一些性质"></a>整除的一些性质</h3><ol>
-<li>设 $m\neq0$ ，则 $a|b$ 等价于 $(m<em>a)|(m</em>b)$ ；</li>
-<li>设整数 $x$ 和 $y$ 满足 $ax+by=1$ 且 $a|n、b|n$ ，则 $(a*b)|n$ ；</li>
+<blockquote>
+<h3 id="反素数"><a href="#反素数" class="headerlink" title="反素数"></a>反素数</h3></blockquote>
+<p>​    暂鸽</p>
+<p><br></p>
+<h2 id="§3-整除与因数分解"><a href="#§3-整除与因数分解" class="headerlink" title="§3 整除与因数分解"></a>§3 整除与因数分解</h2><blockquote>
+<h3 id="整除的一些性质"><a href="#整除的一些性质" class="headerlink" title="整除的一些性质"></a>整除的一些性质</h3></blockquote>
+<ol>
+<li>设 $m\neq0$ ，则 $a|b$ 等价于 $(m\cdot a)|(m\cdot b)$ ；</li>
+<li>设整数 $x$ 和 $y$ 满足 $ax+by=1$ 且 $a|n、b|n$ ，则 $(a\cdot b)|n$ ；</li>
 <li>若一个数的偶数位之和与奇数位之和的差能被11整除，则这个数能被11整除；</li>
 <li>若一个数的末三位数字与末三位以前组成的数之差能被7、11、13整除，则这个数能被7、11、13整除。</li>
 </ol>
-<h3 id="算术基本定理"><a href="#算术基本定理" class="headerlink" title="算术基本定理"></a>算术基本定理</h3><p>​    任意正整数 $n$ 都可以被<strong>唯一</strong>的表示为若干素数之积：$n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}$ 。</p>
-<h3 id="关于因数的一些性质"><a href="#关于因数的一些性质" class="headerlink" title="关于因数的一些性质"></a>关于因数的一些性质</h3><p>​    若正整数 $n$ 的唯一分解为 $n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}$ ，则：</p>
+<blockquote>
+<h3 id="算术基本定理"><a href="#算术基本定理" class="headerlink" title="算术基本定理"></a>算术基本定理</h3></blockquote>
+<p>​    任意正整数 $n$ 都可以被<strong>唯一</strong>的表示为若干素数之积：$n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}$ 。</p>
+<blockquote>
+<h3 id="关于因数的一些性质"><a href="#关于因数的一些性质" class="headerlink" title="关于因数的一些性质"></a>关于因数的一些性质</h3></blockquote>
+<p>​    若正整数 $n$ 的唯一分解为 $n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}$ ，则：</p>
 <ol>
 <li>$n$ 的所有因数个数为 $\tau(n)=\prod\limits_{i=1}^k(e_i+1)$ ； </li>
 <li>$n$ 的所有因数之和为 $\sigma(n)=\prod\limits_{i=1}^k\frac{p_i^{e_i+1}-1}{p_i-1}$ ；</li>
 <li>$n$ 的所有因数之积为 $\pi(n)=n^{\frac12\tau(n)}$ 。</li>
 </ol>
-<h3 id="Pollard-Rho质因数分解"><a href="#Pollard-Rho质因数分解" class="headerlink" title="Pollard-Rho质因数分解"></a>Pollard-Rho质因数分解</h3><p>​    暂鸽</p>
-<h2 id="§4-GCD"><a href="#§4-GCD" class="headerlink" title="§4 GCD"></a>§4 GCD</h2><h3 id="欧几里得"><a href="#欧几里得" class="headerlink" title="欧几里得"></a>欧几里得</h3><p>​    欧几里得算法求两数的最大公约数：$Gcd(a,b)= \begin{cases}a,\ b=0\Gcd(b,a%b),\ b\neq0 \end{cases}$ ，原理即 $Gcd(a,b)=Gcd(a,b-a)$ 。</p>
-<h3 id="LCM"><a href="#LCM" class="headerlink" title="LCM"></a>LCM</h3><p>​    两数的 $GCD$ 与 $LCM$ 的关系为：$Gcd(a,b)<em>Lcm(a,b)=a</em>b$ ，注意写程序求 $LCM$ 时要先除后乘防止炸 $int$ 。</p>
-<p>​    设整数 $a,b$ 的质因数分解分别为 $a=p_1^{a_1}p_2^{a_2}\cdots p_k^{a_k}=\prod\limits_{i=1}^kp_i^{a_i}$ 和 $b=p_1^{b_1}p_2^{b_2}\cdots p_k^{b_k}=\prod\limits_{i=1}^kp_i^{b_i}$ ，则有$Gcd(a,b)=p_1^{min(a_1,b_1)}p_2^{min(a_2,b_2)}\cdots p_k^{min(a_k,b_k)}=\prod\limits_{i=1}^kp_i^{min(a_i,b_i)}$ ，$Lcm(a,b)=p_1^{max(a_1,b_1)}p_2^{max(a_2,b_2)}\cdots p_k^{max(a_k,b_k)}=\prod\limits_{i=1}^kp_i^{max(a_i,b_i)}$  。</p>
-<h3 id="扩展欧几里得"><a href="#扩展欧几里得" class="headerlink" title="扩展欧几里得"></a>扩展欧几里得</h3><h2 id="§5-同余相关"><a href="#§5-同余相关" class="headerlink" title="§5 同余相关"></a>§5 同余相关</h2><h2 id="§6-逆元"><a href="#§6-逆元" class="headerlink" title="§6 逆元"></a>§6 逆元</h2><h2 id="§7-中国剩余定理及其扩展"><a href="#§7-中国剩余定理及其扩展" class="headerlink" title="§7 中国剩余定理及其扩展"></a>§7 中国剩余定理及其扩展</h2><h2 id="§8-欧拉函数-amp-扩展欧拉定理"><a href="#§8-欧拉函数-amp-扩展欧拉定理" class="headerlink" title="§8 欧拉函数&amp;扩展欧拉定理"></a>§8 欧拉函数&amp;扩展欧拉定理</h2><h2 id="§9-数论函数-amp-狄利克雷卷积"><a href="#§9-数论函数-amp-狄利克雷卷积" class="headerlink" title="§9 数论函数&amp;狄利克雷卷积"></a>§9 数论函数&amp;狄利克雷卷积</h2><h3 id="数论函数"><a href="#数论函数" class="headerlink" title="数论函数"></a>数论函数</h3><p>​    若一个函数的定义域为正整数集而值域为整数集，则称该函数为<strong>数论函数</strong>。</p>
-<h3 id="积性函数及其性质"><a href="#积性函数及其性质" class="headerlink" title="积性函数及其性质"></a>积性函数及其性质</h3><p>​    对于数论函数 $f(x)$ ，若对 $\forall a,b\in Z^+$ 且 $a\perp b$ 满足 $f(ab)=f(a)\times f(b)$ ，则称 $f(x)$ 为积性函数；若对 $\forall a,b\in Z^+$ 满足 $f(ab)=f(a)\times f(b)$ ，则称 $f(x)$ 为完全积性函数。</p>
-<p>​    若 $f(x)$ 是积性函数，且 $x$ 的唯一分解为 $x=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}$ ，则显然有 $f(x)=\prod\limits_{i=1}^k f(p_i^{e_i})$。</p>
+<blockquote>
+<h3 id="Pollard-Rho质因数分解"><a href="#Pollard-Rho质因数分解" class="headerlink" title="Pollard-Rho质因数分解"></a>Pollard-Rho质因数分解</h3></blockquote>
+<p>​    暂鸽</p>
+<p><br></p>
+<h2 id="§4-GCD"><a href="#§4-GCD" class="headerlink" title="§4 GCD"></a>§4 GCD</h2><blockquote>
+<h3 id="欧几里得"><a href="#欧几里得" class="headerlink" title="欧几里得"></a>欧几里得</h3></blockquote>
+<p>​    欧几里得算法求两数的最大公约数：<script type="math/tex">Gcd(a,b)= \begin{cases} a,\ b=0\\Gcd(b,a\% b),\ b\neq0 \end{cases}</script> ，原理即 $Gcd(a,b)=Gcd(a,b-a)$ 。</p>
+<blockquote>
+<h3 id="LCM"><a href="#LCM" class="headerlink" title="LCM"></a>LCM</h3></blockquote>
+<p>​    两数的 $GCD$ 与 $LCM$ 的关系为：$Gcd(a,b)\cdot Lcm(a,b)=a\cdot b$ ，注意写程序求 $LCM$ 时要先除后乘防止炸 $int$ 。</p>
+<p>​    设整数 $a,b$ 的质因数分解分别为 <script type="math/tex">a=p_1^{a_1}p_2^{a_2}\cdots p_k^{a_k}=\prod\limits_{i=1}^kp_i^{a_i}</script> 和 <script type="math/tex">b=p_1^{b_1}p_2^{b_2}\cdots p_k^{b_k}=\prod\limits_{i=1}^kp_i^{b_i}</script> ，则有<script type="math/tex">Gcd(a,b)=p_1^{min(a_1,b_1)}p_2^{min(a_2,b_2)}\cdots p_k^{min(a_k,b_k)}=\prod\limits_{i=1}^kp_i^{min(a_i,b_i)}</script> ，<script type="math/tex">Lcm(a,b)=p_1^{max(a_1,b_1)}p_2^{max(a_2,b_2)}\cdots p_k^{max(a_k,b_k)}=\prod\limits_{i=1}^kp_i^{max(a_i,b_i)}</script>  。</p>
+<blockquote>
+<h3 id="扩展欧几里得"><a href="#扩展欧几里得" class="headerlink" title="扩展欧几里得"></a>扩展欧几里得</h3></blockquote>
+<p><br></p>
+<h2 id="§5-同余相关"><a href="#§5-同余相关" class="headerlink" title="§5 同余相关"></a>§5 同余相关</h2><p><br></p>
+<h2 id="§6-逆元"><a href="#§6-逆元" class="headerlink" title="§6 逆元"></a>§6 逆元</h2><p><br></p>
+<h2 id="§7-中国剩余定理及其扩展"><a href="#§7-中国剩余定理及其扩展" class="headerlink" title="§7 中国剩余定理及其扩展"></a>§7 中国剩余定理及其扩展</h2><p><br></p>
+<h2 id="§8-欧拉函数-amp-扩展欧拉定理"><a href="#§8-欧拉函数-amp-扩展欧拉定理" class="headerlink" title="§8 欧拉函数&amp;扩展欧拉定理"></a>§8 欧拉函数&amp;扩展欧拉定理</h2><p><br></p>
+<h2 id="§9-数论函数-amp-狄利克雷卷积"><a href="#§9-数论函数-amp-狄利克雷卷积" class="headerlink" title="§9 数论函数&amp;狄利克雷卷积"></a>§9 数论函数&amp;狄利克雷卷积</h2><blockquote>
+<h3 id="数论函数"><a href="#数论函数" class="headerlink" title="数论函数"></a>数论函数</h3></blockquote>
+<p>​    若一个函数的定义域为正整数集而值域为整数集，则称该函数为<strong>数论函数</strong>。</p>
+<blockquote>
+<h3 id="积性函数及其性质"><a href="#积性函数及其性质" class="headerlink" title="积性函数及其性质"></a>积性函数及其性质</h3></blockquote>
+<p>​    对于数论函数 $f(x)$ ，若对 $\forall a,b\in Z^+$ 且 $a\perp b$ 满足 $f(ab)=f(a)\cdot f(b)$ ，则称 $f(x)$ 为积性函数；若对 $\forall a,b\in Z^+$ 满足 $f(ab)=f(a)\cdot f(b)$ ，则称 $f(x)$ 为完全积性函数。</p>
+<p>​    若 $f(x)$ 是积性函数，且 $x$ 的唯一分解为 <script type="math/tex">x=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}</script> ，则显然有 <script type="math/tex">f(x)=\prod\limits_{i=1}^k f(p_i^{e_i})</script>。</p>
 <p>​    若 $f(x)$ 是积性函数，则 $f$ 的和函数 $F(x)=\sum\limits_{d|x}f(d)$ 也是积性函数。</p>
 <p>​    若 $f(x)、g(x)$ 都是积性函数，则它们的卷积 $(f*g)(x)$ 也是积性函数。</p>
-<h3 id="常见数论函数"><a href="#常见数论函数" class="headerlink" title="常见数论函数"></a>常见数论函数</h3><ol>
+<blockquote>
+<h3 id="常见数论函数"><a href="#常见数论函数" class="headerlink" title="常见数论函数"></a>常见数论函数</h3></blockquote>
+<ol>
 <li><p>恒等函数：$id(x)=x$ ；</p>
 </li>
 <li><p>常数函数：$I(x)=1$ ；</p>
@@ -162,11 +195,34 @@
 </li>
 <li><p>欧拉函数：$\phi(x)=\sum\limits_{i=1}^n[Gcd(i,n)=1]$ ；</p>
 </li>
-<li><p>莫比乌斯函数：$\mu(x)=\begin{cases}1,\ x=1\(-1)^k,\ x=p_1p_2\cdots p_k\0,\ otherwise \end{cases}$ 。</p>
+<li><p>莫比乌斯函数：<script type="math/tex">\mu(x)=\begin{cases}1,\ x=1 \\ (-1)^k,\ x=p_1p_2\cdots p_k \\ 0,\ otherwise \end{cases}</script> ，其中 $p_i$ 为 $x$ 的第 $i$ 个质因数。</p>
 </li>
 </ol>
-<h3 id="狄利克雷卷积"><a href="#狄利克雷卷积" class="headerlink" title="狄利克雷卷积"></a>狄利克雷卷积</h3><p>​    </p>
-<h2 id="§10-莫比乌斯反演"><a href="#§10-莫比乌斯反演" class="headerlink" title="§10 莫比乌斯反演"></a>§10 莫比乌斯反演</h2><h3 id=""><a href="#" class="headerlink" title=""></a></h3><h2 id="§11-整除分块"><a href="#§11-整除分块" class="headerlink" title="§11 整除分块"></a>§11 整除分块</h2><h2 id="§6-卢卡斯定理及其扩展"><a href="#§6-卢卡斯定理及其扩展" class="headerlink" title="§6 卢卡斯定理及其扩展"></a>§6 卢卡斯定理及其扩展</h2><h2 id="§10-离散对数"><a href="#§10-离散对数" class="headerlink" title="§10 离散对数"></a>§10 离散对数</h2><h2 id="§11-二次剩余"><a href="#§11-二次剩余" class="headerlink" title="§11 二次剩余"></a>§11 二次剩余</h2><h2 id="§12-原根"><a href="#§12-原根" class="headerlink" title="§12 原根"></a>§12 原根</h2><h2 id="§6-杜教筛"><a href="#§6-杜教筛" class="headerlink" title="§6 杜教筛"></a>§6 杜教筛</h2><h2 id="§6-Min-25筛"><a href="#§6-Min-25筛" class="headerlink" title="§6 Min_25筛"></a>§6 Min_25筛</h2><h2 id="§6-类欧几里得算法"><a href="#§6-类欧几里得算法" class="headerlink" title="§6 类欧几里得算法"></a>§6 类欧几里得算法</h2><h2 id="§6-N次剩余"><a href="#§6-N次剩余" class="headerlink" title="§6 N次剩余"></a>§6 N次剩余</h2> 
+<blockquote>
+<h3 id="狄利克雷卷积及其性质"><a href="#狄利克雷卷积及其性质" class="headerlink" title="狄利克雷卷积及其性质"></a>狄利克雷卷积及其性质</h3></blockquote>
+<p>​    定义两个<strong>数论函数</strong> $f、g$ 狄利克雷卷积为 <script type="math/tex">(f*g)(n)=\sum\limits_{d|n}^nf(d)g(\frac nd)</script> 。</p>
+<p>​    狄利克雷卷积满足：</p>
+<ol>
+<li>交换律：<script type="math/tex">f*g=g*f</script> ；</li>
+<li>结合律：<script type="math/tex">(f*g)*h=f*(g*h)</script> ；</li>
+<li>分配律：<script type="math/tex">f*(g+h)=f*g+f*h</script> 。</li>
+</ol>
+<blockquote>
+<h3 id="常见数论函数的狄利克雷卷积"><a href="#常见数论函数的狄利克雷卷积" class="headerlink" title="常见数论函数的狄利克雷卷积"></a>常见数论函数的狄利克雷卷积</h3></blockquote>
+<ol>
+<li><p>$\epsilon$ 为狄利克雷卷积的<strong>幺元</strong>，即对于任意数论函数 $f$ ，有 <script type="math/tex">f*\epsilon=f</script> ，以及 <script type="math/tex">f*f^{-1}=\epsilon</script> ，其中 $f^{-1}$ 为 $f$ 的逆元；</p>
+</li>
+<li><p><script type="math/tex">\mu *I=\epsilon</script> ，即 $\mu$ 与 $I$ 互为逆元；</p>
+</li>
+<li><script type="math/tex">\phi *I=id</script> ；</li>
+<li><script type="math/tex">I*I=d</script> ，$d(n)$ 为 $n$ 的因子个数；</li>
+<li><script type="math/tex">id*I=\sigma</script> ，$\sigma(n)$ 为 $n$ 的因子之和。</li>
+</ol>
+<p><br></p>
+<h2 id="§10-莫比乌斯反演"><a href="#§10-莫比乌斯反演" class="headerlink" title="§10 莫比乌斯反演"></a>§10 莫比乌斯反演</h2><blockquote>
+<h3 id="莫比乌斯反演证明"><a href="#莫比乌斯反演证明" class="headerlink" title="莫比乌斯反演证明"></a>莫比乌斯反演证明</h3></blockquote>
+<p>​    </p>
+<h2 id="§11-整除分块"><a href="#§11-整除分块" class="headerlink" title="§11 整除分块"></a>§11 整除分块</h2><h2 id="§6-卢卡斯定理及其扩展"><a href="#§6-卢卡斯定理及其扩展" class="headerlink" title="§6 卢卡斯定理及其扩展"></a>§6 卢卡斯定理及其扩展</h2><h2 id="§10-离散对数"><a href="#§10-离散对数" class="headerlink" title="§10 离散对数"></a>§10 离散对数</h2><h2 id="§11-二次剩余"><a href="#§11-二次剩余" class="headerlink" title="§11 二次剩余"></a>§11 二次剩余</h2><h2 id="§12-原根"><a href="#§12-原根" class="headerlink" title="§12 原根"></a>§12 原根</h2><h2 id="§6-杜教筛"><a href="#§6-杜教筛" class="headerlink" title="§6 杜教筛"></a>§6 杜教筛</h2><h2 id="§6-Min-25筛"><a href="#§6-Min-25筛" class="headerlink" title="§6 Min_25筛"></a>§6 Min_25筛</h2><h2 id="§6-类欧几里得算法"><a href="#§6-类欧几里得算法" class="headerlink" title="§6 类欧几里得算法"></a>§6 类欧几里得算法</h2><h2 id="§6-N次剩余"><a href="#§6-N次剩余" class="headerlink" title="§6 N次剩余"></a>§6 N次剩余</h2> 
       <!-- reward -->
       
     </div>
