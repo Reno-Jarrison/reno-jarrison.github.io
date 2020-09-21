@@ -119,7 +119,7 @@
 <ol>
 <li>素数是除了1和它本身外，没有其他约数的数；</li>
 <li>素数分布：不超过n的质数大约有 $\frac{n}{\ln n}$ 个，即每 $\ln n$ 个数中大约有一个素数；</li>
-<li>素数筛：1. $Eratosthenes$ 筛法： $O(n\log \log n)$ ；2. 欧拉筛： $O(n)$；</li>
+<li>素数筛：1. $Eratosthenes$ 筛法： $O(n\log \log n)$ ；2. 线性筛： $O(n)$；</li>
 <li>素数判定：1. 试除法： $O(\sqrt n)$ ；2. $Miller-Rabin$ 测试 ： $O(\log^2n)$ 。</li>
 </ol>
 <blockquote>
@@ -170,7 +170,7 @@
 <h2 id="§5-同余相关"><a href="#§5-同余相关" class="headerlink" title="§5 同余相关"></a>§5 同余相关</h2><p><br></p>
 <h2 id="§6-逆元"><a href="#§6-逆元" class="headerlink" title="§6 逆元"></a>§6 逆元</h2><p><br></p>
 <h2 id="§7-中国剩余定理及其扩展"><a href="#§7-中国剩余定理及其扩展" class="headerlink" title="§7 中国剩余定理及其扩展"></a>§7 中国剩余定理及其扩展</h2><p><br></p>
-<h2 id="§8-欧拉函数-amp-扩展欧拉定理-amp-欧拉反演"><a href="#§8-欧拉函数-amp-扩展欧拉定理-amp-欧拉反演" class="headerlink" title="§8 欧拉函数&amp;扩展欧拉定理&amp;欧拉反演"></a>§8 欧拉函数&amp;扩展欧拉定理&amp;欧拉反演</h2><blockquote>
+<h2 id="§8-欧拉函数-amp-扩展欧拉定理"><a href="#§8-欧拉函数-amp-扩展欧拉定理" class="headerlink" title="§8 欧拉函数&amp;扩展欧拉定理"></a>§8 欧拉函数&amp;扩展欧拉定理</h2><blockquote>
 <h3 id="欧拉函数"><a href="#欧拉函数" class="headerlink" title="欧拉函数"></a>欧拉函数</h3></blockquote>
 <p>​    正整数 $n$ 的欧拉函数等于不超过 $n$ 且与 $n$ 互质的正整数个数，记作 $\phi(n)$ 。即 $\phi(x)=\sum\limits_{i=1}^n[\gcd(i,n)=1]$ 。</p>
 <p>​    根据欧拉函数的定义易知，对任意质数 $p$ ，有 <script type="math/tex">\phi(p)=p-1</script> 。而 $p^k$ 与除 $p$ 的倍数以外的数都互质，则有 <script type="math/tex">\phi(p^k)=p^k-p^{k-1}=p^k(1-\frac 1p)</script> 。又因为欧拉函数是积性函数，当 $a\perp b$ 时，满足 $\phi(ab)=\phi(a)\cdot\phi(b)$ ，则对任意正整数 $n$ ，有 <script type="math/tex">\phi(n)=\prod\limits_{i=1}^k\phi(p_i^{e_i})=n\prod\limits_{i=1}^k(1-\frac1{p_i})</script> ，其中 $n$ 的唯一分解为 $n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}$ 。</p>
@@ -212,7 +212,7 @@
 <p>​    若 $f(x)$ 是积性函数，则 $f$ 的和函数 $F(x)=\sum\limits_{d|x}f(d)$ 也是积性函数。</p>
 <p>​    若 $f(x)、g(x)$ 都是积性函数，则它们的卷积 $(f*g)(x)$ 也是积性函数。</p>
 <blockquote>
-<h3 id="常见数论函数"><a href="#常见数论函数" class="headerlink" title="常见数论函数"></a>常见数论函数</h3></blockquote>
+<h3 id="常见积性函数"><a href="#常见积性函数" class="headerlink" title="常见积性函数"></a>常见积性函数</h3></blockquote>
 <ol>
 <li><p>恒等函数：$id(x)=x$ ；</p>
 </li>
@@ -246,23 +246,12 @@
 <li><p><script type="math/tex">\mu *I=\epsilon</script> ，即 $\mu$ 与 $I$ 互为逆元；</p>
 </li>
 <li><script type="math/tex">\phi *I=id</script> ；</li>
-<li><script type="math/tex">\mu*id=\phi</script> ；</li>
+<li><script type="math/tex">\mu*id=\phi</script> ，即 <script type="math/tex">\phi(n)=\sum\limits_{d|n}\mu(d)\frac nd</script> ，从而有 <script type="math/tex">\frac {\phi(n)}n=\sum\limits_{d|n}\frac{\mu(d)}d</script>；</li>
 <li><script type="math/tex">I*I=d</script> ，$d(n)$ 为 $n$ 的因子个数；</li>
 <li><script type="math/tex">id*I=\sigma</script> ，$\sigma(n)$ 为 $n$ 的因子之和。</li>
 </ol>
 <p><br></p>
-<h2 id="§10-莫比乌斯反演"><a href="#§10-莫比乌斯反演" class="headerlink" title="§10 莫比乌斯反演"></a>§10 莫比乌斯反演</h2><blockquote>
-<h3 id="利用狄利克雷卷积证明莫比乌斯反演"><a href="#利用狄利克雷卷积证明莫比乌斯反演" class="headerlink" title="利用狄利克雷卷积证明莫比乌斯反演"></a>利用狄利克雷卷积证明莫比乌斯反演</h3></blockquote>
-<p>​    设 <script type="math/tex">g(n)=\sum\limits_{d|n}f(d)</script> ，表示成卷积形式，即为 <script type="math/tex">g=f*I</script> ，等式两边同时卷上 $\mu$ ，得 <script type="math/tex">g*\mu=f*I*\mu</script> ，于是有 <script type="math/tex">f*(I*\mu)=f*\epsilon=f=g*\mu</script> ，即 <script type="math/tex">f(n)=\sum\limits_{d|n}g(d)\mu(\frac nd)</script> ；同时也可得到另一形式 <script type="math/tex">f(n)=\sum\limits_{d|n}\mu(d)g(\frac nd)</script> 。</p>
-<blockquote>
-<h3 id="因数反演与倍数反演"><a href="#因数反演与倍数反演" class="headerlink" title="因数反演与倍数反演"></a>因数反演与倍数反演</h3></blockquote>
-<p>​    因数反演公式即上述公式：设<script type="math/tex">g(n)=\sum\limits_{d|n}f(d)</script> ，则有 <script type="math/tex">f(n)=\sum\limits_{d|n}\mu(d)g(\frac nd)</script> 。</p>
-<p>​    然而有更为常用的倍数反演公式：设<script type="math/tex">g(n)=\sum\limits_{n|d}f(d)</script> ，则有 <script type="math/tex">f(n)=\sum\limits_{n|d}\mu(\frac d n)g(d)</script> 。</p>
-<blockquote>
-<h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3></blockquote>
-<p>​    </p>
-<p><br></p>
-<h2 id="§11-整除分块"><a href="#§11-整除分块" class="headerlink" title="§11 整除分块"></a>§11 整除分块</h2><blockquote>
+<h2 id="§10-整除分块"><a href="#§10-整除分块" class="headerlink" title="§10 整除分块"></a>§10 整除分块</h2><blockquote>
 <h3 id="整除分块解决的问题"><a href="#整除分块解决的问题" class="headerlink" title="整除分块解决的问题"></a>整除分块解决的问题</h3></blockquote>
 <p>​    求：<script type="math/tex">\sum\limits_{i=1}^n\lfloor \frac n i\rfloor</script> ，<script type="math/tex">n\leq10^{12}</script>。</p>
 <p>​    显然暴力计算是 <script type="math/tex">O(n)</script> 的，观察可发现当 $i$ 较大时，对于一段连续的 $i$ ，<script type="math/tex">\lfloor \frac n i \rfloor</script> 的值可能相等，于是考虑利用分块的思想，将相同的值一起计算。</p>
@@ -272,7 +261,52 @@
 <p>​    设 <script type="math/tex">k=\lfloor\frac n i \rfloor</script> 且 <script type="math/tex">k=\lfloor\frac n {i'} \rfloor</script> 其中 $i’=i+d$ ，则 <script type="math/tex">ki+q=n</script>，<script type="math/tex">k(i+d)+q'=n</script> ，进而 <script type="math/tex">q'=q-dk</script> 。由于 <script type="math/tex">q'>0</script> ，则 <script type="math/tex">d_{max}=\lfloor \frac q k\rfloor</script> ，所以有 <script type="math/tex">i'_{max}=i+\lfloor \frac q k\rfloor</script> ，又有 <script type="math/tex">q=n-\lfloor \frac n i\rfloor*i</script> 。</p>
 <p>​    从而 <script type="math/tex">i'_{max}=i+\lfloor \frac {n-\lfloor \frac n i\rfloor*i} {\lfloor \frac n i\rfloor}\rfloor=\lfloor\frac{\lfloor \frac n i\rfloor*i+n-\lfloor \frac n i\rfloor*i}{\lfloor \frac n i\rfloor} \rfloor=\lfloor \frac n {\lfloor \frac n i\rfloor}\rfloor</script> 。</p>
 <p><br></p>
-<h2 id="§6-卢卡斯定理及其扩展"><a href="#§6-卢卡斯定理及其扩展" class="headerlink" title="§6 卢卡斯定理及其扩展"></a>§6 卢卡斯定理及其扩展</h2><h2 id="§10-离散对数"><a href="#§10-离散对数" class="headerlink" title="§10 离散对数"></a>§10 离散对数</h2><h2 id="§11-二次剩余"><a href="#§11-二次剩余" class="headerlink" title="§11 二次剩余"></a>§11 二次剩余</h2><h2 id="§12-原根"><a href="#§12-原根" class="headerlink" title="§12 原根"></a>§12 原根</h2><h2 id="§6-杜教筛"><a href="#§6-杜教筛" class="headerlink" title="§6 杜教筛"></a>§6 杜教筛</h2><h2 id="§6-Min-25筛"><a href="#§6-Min-25筛" class="headerlink" title="§6 Min_25筛"></a>§6 Min_25筛</h2><h2 id="§6-类欧几里得算法"><a href="#§6-类欧几里得算法" class="headerlink" title="§6 类欧几里得算法"></a>§6 类欧几里得算法</h2><h2 id="§6-N次剩余"><a href="#§6-N次剩余" class="headerlink" title="§6 N次剩余"></a>§6 N次剩余</h2> 
+<h2 id="§11-反演"><a href="#§11-反演" class="headerlink" title="§11 反演"></a>§11 反演</h2><blockquote>
+<h3 id="莫比乌斯反演"><a href="#莫比乌斯反演" class="headerlink" title="莫比乌斯反演"></a>莫比乌斯反演</h3></blockquote>
+<p>​    若 $f$ 是数论函数，$g$ 是 $f$ 的和函数，即 <script type="math/tex">g(n)=\sum\limits_{d|n}f(d)</script> ，则对任意正整数 $n$ ，有 <script type="math/tex">f(n)=\sum\limits_{d|n}\mu(d)g(\frac nd)</script> 。</p>
+<p>​    利用狄利克雷卷积可简单证明：</p>
+<p>​    将 <script type="math/tex">g(n)=\sum\limits_{d|n}f(d)</script> 表示成卷积形式，即为 <script type="math/tex">g=f*I</script> ，等式两边同时卷上 $\mu$ ，得 <script type="math/tex">g*\mu=f*I*\mu</script> ，于是有 <script type="math/tex">f*(I*\mu)=f*\epsilon=f=g*\mu</script> ，即 <script type="math/tex">f(n)=\sum\limits_{d|n}g(d)\mu(\frac nd)</script> ；同时也可得到另一形式 <script type="math/tex">f(n)=\sum\limits_{d|n}\mu(d)g(\frac nd)</script> 。</p>
+<blockquote>
+<h3 id="莫比乌斯的因数反演与倍数反演"><a href="#莫比乌斯的因数反演与倍数反演" class="headerlink" title="莫比乌斯的因数反演与倍数反演"></a>莫比乌斯的因数反演与倍数反演</h3></blockquote>
+<p>​    因数反演公式即上述公式：设<script type="math/tex">g(n)=\sum\limits_{d|n}f(d)</script> ，则有 <script type="math/tex">f(n)=\sum\limits_{d|n}\mu(d)g(\frac nd)</script> 。</p>
+<p>​    然而有更为常用的倍数反演公式：设<script type="math/tex">g(n)=\sum\limits_{n|d}f(d)</script> ，则有 <script type="math/tex">f(n)=\sum\limits_{n|d}\mu(\frac d n)g(d)</script> 。</p>
+<blockquote>
+<h3 id="莫比乌斯反演例题"><a href="#莫比乌斯反演例题" class="headerlink" title="莫比乌斯反演例题"></a>莫比乌斯反演例题</h3></blockquote>
+<ol>
+<li><p>求：<script type="math/tex">\sum\limits_{i=1}^n\sum\limits_{j=1}^m[\gcd(i,j)=k]</script> ，<script type="math/tex">\max(m,n)\le10^5</script> 。</p>
+<p>利用 <script type="math/tex">\mu*1=\epsilon</script> 进行反演：<script type="math/tex">\sum\limits_{i=1}^n\sum\limits_{j=1}^m[\gcd(i,j)=k]=\sum\limits_{i=1}^{\lfloor\frac nk\rfloor}\sum\limits_{j=1}^{\lfloor\frac mk\rfloor}[\gcd(i,j)=1]=\sum\limits_{i=1}^{\lfloor\frac nk\rfloor}\sum\limits_{j=1}^{\lfloor\frac mk\rfloor}\sum\limits_{d|\gcd(i,j)}\mu(d)</script> 。将 $GCD$ 提出来换到外层枚举，化为： <script type="math/tex">\sum\limits_{d=1}^{\min(n,m)}\mu(d)\sum\limits_{d|i}^{\lfloor\frac nk\rfloor}\sum\limits_{d|j}^{\lfloor\frac mk\rfloor}1=\sum\limits_{d=1}^{\min(n,m)}\mu(d)\sum\limits_{i=1}^{\lfloor\frac n{kd}\rfloor}\sum\limits_{j=1}^{\lfloor\frac m{kd}\rfloor}1=\sum\limits_{d=1}^{\min(n,m)}\mu(d)\lfloor\frac n{kd}\rfloor\lfloor\frac m{kd}\rfloor</script> 。整除分块即可。</p>
+</li>
+</ol>
+<ol>
+<li>鸽</li>
+</ol>
+<blockquote>
+<h3 id="欧拉反演"><a href="#欧拉反演" class="headerlink" title="欧拉反演"></a>欧拉反演</h3></blockquote>
+<p>​    利用欧拉函数的一条性质：<script type="math/tex">n=\sum\limits_{d|n}\phi(d)</script> ，将 $n$ 换成 <script type="math/tex">\gcd(i,j)</script> ，可得 <script type="math/tex">\gcd(i,j)=\sum\limits_{d|\gcd(i,j)}\phi(d)=\sum\limits_{d|i}\sum\limits_{d|j}\phi(d)</script> 。</p>
+<blockquote>
+<h3 id="欧拉反演例题"><a href="#欧拉反演例题" class="headerlink" title="欧拉反演例题"></a>欧拉反演例题</h3></blockquote>
+<p>​    求：<script type="math/tex">\sum\limits_{i=1}^n\gcd(i,n)</script> ，<script type="math/tex">n\leq10^{12}</script>。</p>
+<p>​    利用上述反演公式，可得 <script type="math/tex">\sum\limits_{i=1}^n\gcd(i,n)=\sum\limits_{i=1}^n\sum\limits_{d|i}\sum\limits_{d|n}\phi(d)=\sum\limits_{d|n}\sum\limits_{i=1}^n\sum\limits_{d|i}\phi(d)=\sum\limits_{d|n}\phi(d)\sum\limits_{i=1}^n[d|i]</script> 。即对于每个 $d$ 而言， 当且仅当 $i$ 是 $d$ 的倍数时，产生 <script type="math/tex">\phi(d)</script> 的贡献。而不超过 $n$ 的数中 $d$ 的倍数有 $\frac nd$ 个，故 <script type="math/tex">\sum\limits_{i=1}^n\gcd(i,n)=\sum\limits_{d|n}\frac n d\phi(d)</script> 。<script type="math/tex">O(\sqrt n)</script> 枚举因数即可。</p>
+<p><br></p>
+<h2 id="§12-杜教筛"><a href="#§12-杜教筛" class="headerlink" title="§12 杜教筛"></a>§12 杜教筛</h2><blockquote>
+<h3 id="杜教筛解决的问题"><a href="#杜教筛解决的问题" class="headerlink" title="杜教筛解决的问题"></a>杜教筛解决的问题</h3></blockquote>
+<p>​    杜教筛可以在低于线性的时间复杂度内计算积性函数的<strong>前缀和</strong>，即求：<script type="math/tex">S(n)=\sum\limits_{i=1}^nf(i)</script> ，<script type="math/tex">n\le10^{10}</script> 其中 $f$ 为积性函数。</p>
+<p>​    为了解决这个问题，我们需要构造出一个积性函数 $g$ ，设 <script type="math/tex">h=f*g</script> ，则 $h$ 的前缀和为 <script type="math/tex">\sum\limits_{i=1}^nh(i)=\sum\limits_{i=1}^n(f*g)(i)=\sum\limits_{i=1}^n\sum\limits_{d|i}f(\frac i d)g(d)</script> 。交换枚举顺序将 $g(d)$ 提出来，则 <script type="math/tex">\sum\limits_{i=1}^nh(i)=\sum\limits_{d=1}^ng(d)\sum\limits_{i=1}^{\lfloor\frac n d\rfloor}f(i)=\sum\limits_{d=1}^ng(d)\cdot S({\lfloor\frac n d\rfloor})</script> 。将第一项提出来，得 <script type="math/tex">\sum\limits_{i=1}^nh(i)=g(1)\cdot S(n)+\sum\limits_{d=2}^ng(d)\cdot S({\lfloor\frac n d\rfloor})</script> ，从而有 <script type="math/tex">S(n)=\frac 1{g(1)}[\sum\limits_{i=1}^nh(i)-\sum\limits_{d=2}^ng(d)\cdot S({\lfloor\frac n d\rfloor})]</script> ，这就是杜教筛的<strong>套路公式</strong>。</p>
+<p>​    于是，只要当 $h(i)$ 的前缀和能在短时间内求出，再对后面的式子进行整除分块即可。</p>
+<p>​    注意：1. 递归求解的时候记忆化；2. 线性筛预处理前 <script type="math/tex">n^{\frac 2 3}</script> 个前缀和。这样一来，求解 $S(n)$ 的复杂度可以达到 <script type="math/tex">O(n^{\frac 23})</script> 。</p>
+<p>​    而对 $g$ 和 $h$ 的选择则和 $f$ 有关了。</p>
+<blockquote>
+<h3 id="求莫比乌斯函数的前缀和"><a href="#求莫比乌斯函数的前缀和" class="headerlink" title="求莫比乌斯函数的前缀和"></a>求莫比乌斯函数的前缀和</h3></blockquote>
+<p>​    即求：<script type="math/tex">S(n)=\sum\limits_{i=1}^n\mu(i)</script> 。综合狄利克雷卷积的知识，有 <script type="math/tex">\epsilon=\mu*I</script> ，而 $\epsilon$ 的前缀和又非常好求，即为1，并且 $I$ 也方便参与整除分块的计算。于是可以带入上述式子，得到 <script type="math/tex">S(n)=1-\sum\limits_{d=2}^nS({\lfloor\frac n d\rfloor})]</script> 。</p>
+<blockquote>
+<h3 id="求欧拉函数的额前缀和"><a href="#求欧拉函数的额前缀和" class="headerlink" title="求欧拉函数的额前缀和"></a>求欧拉函数的额前缀和</h3></blockquote>
+<p>​    即求：<script type="math/tex">S(n)=\sum\limits_{i=1}^n\phi(i)</script> 。同理，有 <script type="math/tex">id=\phi*I</script> ，而 $id$ 的前缀和即 <script type="math/tex">\sum\limits_{i=1}^ni=\frac{(n+1)n}2</script> 。带入套路公式可得 <script type="math/tex">S(n)=\sum\limits_{i=1}^ni-\sum\limits_{d=2}^nS({\lfloor\frac n d\rfloor})]</script> 。</p>
+<blockquote>
+<h3 id="求奇怪函数的前缀和"><a href="#求奇怪函数的前缀和" class="headerlink" title="求奇怪函数的前缀和"></a>求奇怪函数的前缀和</h3></blockquote>
+<p>​    求：<script type="math/tex">S(n)=\sum\limits_{i=1}^ni\cdot \phi(i)</script> 。此时可能没法迅速找到合适的 $h$ 了，先考虑卷积的式子：<script type="math/tex">h(n)=(f*g)(n)=\sum\limits_{d|n}d\cdot\phi(d)\cdot g(\frac nd)</script> 。这里单独的 $d$ 不易处理，所以我们希望从 $g$ 中得到 $\frac1d$ ，从而能把 $d$ 消去。考虑令 $g$ 为 $id$ ，则原式可化为：<script type="math/tex">\sum\limits_{d|n}d\cdot \phi(d) \cdot \frac n d=n\sum\limits_{d|n}\phi(d)=n^2</script> 。这时可以发现， $h$ 已经找到了，且 $id$ 也容易进行整除分块，于是带回杜教筛的套路式，可得 <script type="math/tex">S(n)=\sum\limits_{i=1}^ni^2-\sum\limits_{d=2}^nd\cdot S({\lfloor\frac n d\rfloor})]</script> 。</p>
+<p>​    杜教筛还能求如 <script type="math/tex">\sum\limits_{i=1}^ni^2\cdot \mu(i)</script> 一类的奇怪积性函数的前缀和，可以参考上述思路。</p>
+<p><br></p>
+<h2 id="§13-Min-25筛"><a href="#§13-Min-25筛" class="headerlink" title="§13 Min_25筛"></a>§13 Min_25筛</h2><h2 id="§13-卢卡斯定理及其扩展"><a href="#§13-卢卡斯定理及其扩展" class="headerlink" title="§13 卢卡斯定理及其扩展"></a>§13 卢卡斯定理及其扩展</h2><h2 id="§14-离散对数"><a href="#§14-离散对数" class="headerlink" title="§14 离散对数"></a>§14 离散对数</h2><h2 id="§15-二次剩余"><a href="#§15-二次剩余" class="headerlink" title="§15 二次剩余"></a>§15 二次剩余</h2><h2 id="§16-原根"><a href="#§16-原根" class="headerlink" title="§16 原根"></a>§16 原根</h2><h2 id="§6-类欧几里得算法"><a href="#§6-类欧几里得算法" class="headerlink" title="§6 类欧几里得算法"></a>§6 类欧几里得算法</h2><h2 id="§6-N次剩余"><a href="#§6-N次剩余" class="headerlink" title="§6 N次剩余"></a>§6 N次剩余</h2> 
       <!-- reward -->
       
     </div>
