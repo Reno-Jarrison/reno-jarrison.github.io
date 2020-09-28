@@ -77,7 +77,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">1.9k</span>
+            <span class="post-count">3.7k</span>
         </span>
     </span>
 
@@ -86,7 +86,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">8 min</span>
+            <span class="post-count">16 min</span>
         </span>
     </span>
 </div>
@@ -108,8 +108,8 @@
 <h2 id="§1-公式-amp-结论"><a href="#§1-公式-amp-结论" class="headerlink" title="§1 公式&amp;结论"></a>§1 公式&amp;结论</h2><ol>
 <li>费马小定理：若 $p$ 是素数且 $a\perp p$ ，则 $a^{p-1}\equiv 1\pmod p$ 。</li>
 <li>威尔逊定理： $p$ 是素数的充要条件是 $(p-1)!\equiv 1\pmod p$ 。</li>
-<li>欧拉定理：若 $a\perp m$ ，则 $a^{\phi(m)}\equiv 1\pmod m$ 。</li>
-<li>裴蜀定理：设 $a，b$ 是整数且 $\gcd(a,b)=d$ ，则对任意整数 $x，y$ ，不定方程 $ax+by=c$ 成立的充要条件是 $d|c$ ；裴蜀定理可推广到多个变量：对于不定方程 $a_1x_1+a_2x_2+\cdots+a_nx_n=c$ ，当且仅当 $\gcd(a_1,a_2,\cdots,a_n)|c$ 时，方程才有整数解。</li>
+<li>欧拉定理：若 $a\perp m$ ，则 <script type="math/tex">a^{\phi(m)}\equiv 1\pmod m</script> 。</li>
+<li>裴蜀定理：设 $a，b$ 是整数且 $\gcd(a,b)=d$ ，则对任意整数 $x，y$ ，不定方程 $ax+by=c$ 成立的充要条件是 $d\mid c$ ；裴蜀定理可推广到多个变量：对于不定方程 $a_1x_1+a_2x_2+\cdots+a_nx_n=c$ ，当且仅当 $\gcd(a_1,a_2,\cdots,a_n)\mid c$ 时，方程才有整数解。</li>
 <li>二次探测定理：若 $p$ 是素数 ，则方程 $x^2\equiv 1\pmod p$ 的解为 $x=1$ 或 $x=p-1$ 。</li>
 <li>设 $Fib(i)$ 为 $fibonacci$ 数列的第 $i$ 项，则 $\gcd(Fib(n),Fib(m))=Fib(\gcd(n,m))$。 </li>
 </ol>
@@ -132,13 +132,13 @@
 </ol>
 <blockquote>
 <h3 id="反素数"><a href="#反素数" class="headerlink" title="反素数"></a>反素数</h3></blockquote>
-<p>​    暂鸽</p>
+<p>​    定义正整数 $n$ 的因子个数为 $d(n)$ ，若对于任意小于 $n$ 的正整数 $x$ 都有 $f(x)&lt;f(n)$ 成立，则称 $n$ 为反素数。</p>
 <p><br></p>
 <h2 id="§3-整除与因数分解"><a href="#§3-整除与因数分解" class="headerlink" title="§3 整除与因数分解"></a>§3 整除与因数分解</h2><blockquote>
 <h3 id="整除的一些性质"><a href="#整除的一些性质" class="headerlink" title="整除的一些性质"></a>整除的一些性质</h3></blockquote>
 <ol>
-<li>设 $m\neq0$ ，则 $a|b$ 等价于 $(m\cdot a)|(m\cdot b)$ ；</li>
-<li>设整数 $x$ 和 $y$ 满足 $ax+by=1$ 且 $a|n、b|n$ ，则 $(a\cdot b)|n$ ；</li>
+<li>设 $m\neq0$ ，则 $a\mid b$ 等价于 $(m\cdot a)|(m\cdot b)$ ；</li>
+<li>设整数 $x$ 和 $y$ 满足 $ax+by=1$ 且 $a\mid n、b\mid n$ ，则 $(a\cdot b)\mid n$ ；</li>
 <li>若一个数的偶数位之和与奇数位之和的差能被11整除，则这个数能被11整除；</li>
 <li>若一个数的末三位数字与末三位以前组成的数之差能被7、11、13整除，则这个数能被7、11、13整除。</li>
 </ol>
@@ -154,23 +154,79 @@
 <li>$n$ 的所有因数之积为 $\pi(n)=n^{\frac12\tau(n)}$ 。</li>
 </ol>
 <blockquote>
+<h3 id="n-的质因数分解"><a href="#n-的质因数分解" class="headerlink" title="n!的质因数分解"></a>n!的质因数分解</h3></blockquote>
+<p>​    设 <script type="math/tex">n!=p_1^{d_1}p_2^{d_2}\cdots p_k^{d_k}</script> ，其中 <script type="math/tex">d_i=\lfloor\frac n{p_i}\rfloor+\lfloor\frac n{p_i^2}\rfloor+\cdots +\lfloor\frac n{p_i^{x}}\rfloor</script> 。</p>
+<blockquote>
 <h3 id="Pollard-Rho质因数分解"><a href="#Pollard-Rho质因数分解" class="headerlink" title="Pollard-Rho质因数分解"></a>Pollard-Rho质因数分解</h3></blockquote>
-<p>​    暂鸽</p>
+<p>​    暂鸽。</p>
 <p><br></p>
-<h2 id="§4-GCD"><a href="#§4-GCD" class="headerlink" title="§4 GCD"></a>§4 GCD</h2><blockquote>
-<h3 id="欧几里得"><a href="#欧几里得" class="headerlink" title="欧几里得"></a>欧几里得</h3></blockquote>
+<h2 id="§4-GCD及其扩展（EXGCD）"><a href="#§4-GCD及其扩展（EXGCD）" class="headerlink" title="§4 GCD及其扩展（EXGCD）"></a>§4 GCD及其扩展（EXGCD）</h2><blockquote>
+<h3 id="欧几里得算法"><a href="#欧几里得算法" class="headerlink" title="欧几里得算法"></a>欧几里得算法</h3></blockquote>
 <p>​    欧几里得算法求两数的最大公约数：<script type="math/tex">\gcd(a,b)= \begin{cases} a &,b=0\\\gcd(b,a\% b)&, b\neq0 \end{cases}</script> ，原理即 $\gcd(a,b)=\gcd(a,b-a)$ 。</p>
 <blockquote>
 <h3 id="LCM"><a href="#LCM" class="headerlink" title="LCM"></a>LCM</h3></blockquote>
 <p>​    两数的 $GCD$ 与 $LCM$ 的关系为：$\gcd(a,b)\cdot lcm(a,b)=a\cdot b$ ，注意写程序求 $LCM$ 时要先除后乘防止炸 $int$ 。</p>
 <p>​    设整数 $a,b$ 的质因数分解分别为 <script type="math/tex">a=p_1^{a_1}p_2^{a_2}\cdots p_k^{a_k}=\prod\limits_{i=1}^kp_i^{a_i}</script> 和 <script type="math/tex">b=p_1^{b_1}p_2^{b_2}\cdots p_k^{b_k}=\prod\limits_{i=1}^kp_i^{b_i}</script> ，则有<script type="math/tex">\gcd(a,b)=p_1^{min(a_1,b_1)}p_2^{min(a_2,b_2)}\cdots p_k^{min(a_k,b_k)}=\prod\limits_{i=1}^kp_i^{min(a_i,b_i)}</script> ，<script type="math/tex">lcm(a,b)=p_1^{max(a_1,b_1)}p_2^{max(a_2,b_2)}\cdots p_k^{max(a_k,b_k)}=\prod\limits_{i=1}^kp_i^{max(a_i,b_i)}</script>  。</p>
 <blockquote>
-<h3 id="扩展欧几里得"><a href="#扩展欧几里得" class="headerlink" title="扩展欧几里得"></a>扩展欧几里得</h3></blockquote>
+<h3 id="扩展欧几里得（EXGCD）"><a href="#扩展欧几里得（EXGCD）" class="headerlink" title="扩展欧几里得（EXGCD）"></a>扩展欧几里得（EXGCD）</h3></blockquote>
+<p>​    $EXGCD$ 一般用于求解二元一次不定方程的<strong>整数解</strong>，形如 $a\cdot x+b\cdot y=c$ 。由<strong>裴蜀</strong>定理可知，不定方程 <script type="math/tex">a\cdot x+b\cdot y=\gcd(a,b)</script> 一定有解，且当 <script type="math/tex">\gcd(a,b)\nmid c</script> 时，方程无解。因此，我们先考虑求解方程 <script type="math/tex">a\cdot x+b\cdot y=\gcd(a,b)</script> 。</p>
+<p>​    由于 <script type="math/tex">\gcd(a,b)=\gcd(b,a\%b)</script> ，设 <script type="math/tex">b\cdot x'+a\%b\cdot y'=\gcd(b,a\%b)</script> 。因为 <script type="math/tex">a\%b=a-\lfloor\frac ab\rfloor\cdot b</script> ，则 <script type="math/tex">b\cdot x'+(a-\lfloor\frac ab\rfloor\cdot b)\cdot y'=\gcd(b,a\%b)</script> ，整理得 <script type="math/tex">a\cdot y'+b\cdot (x'-\lfloor\frac ab\rfloor\cdot y')=\gcd(b,a\%b)</script> ，对比原方程，有 <script type="math/tex">x=y',y=x'-\lfloor\frac ab\rfloor\cdot y'</script> 。这里是在说，如果 $x’,y’$ 是方程 <script type="math/tex">a\cdot y'+b\cdot (x'-\lfloor\frac ab\rfloor\cdot y')=\gcd(b,a\%b)</script> 的一组解，那么可以得到方程 <script type="math/tex">a\cdot x+b\cdot y=\gcd(a,b)</script> 的一组解 $x,y$ ，且 <script type="math/tex">x=y',y=x'-\lfloor\frac ab\rfloor\cdot y'</script> 。</p>
+<p>​    可以发现，这是一个递归的过程，并且刚好可以与求解 $GCD$ 的递归过程合并。而当 $b’=0$ 时，<script type="math/tex">a'=\gcd(a,b)</script> ，显然 $x’=1,y’=0$ 为方程 <script type="math/tex">a'\cdot x'+b'\cdot y'=\gcd(a,b)</script> 的一组解，于是将这组解作为初始解递归求解即可得原方程的一组解 $x_0,y_0$ 。同时可以将其扩展到一个解系：<script type="math/tex">\begin{cases}x=x_0+k\cdot\frac bd \\y=y_0-k\cdot\frac ad \end{cases}</script> ，其中 <script type="math/tex">d=\gcd(a,b)</script> 。</p>
 <p><br></p>
-<h2 id="§5-同余相关"><a href="#§5-同余相关" class="headerlink" title="§5 同余相关"></a>§5 同余相关</h2><p><br></p>
-<h2 id="§6-逆元"><a href="#§6-逆元" class="headerlink" title="§6 逆元"></a>§6 逆元</h2><p><br></p>
-<h2 id="§7-中国剩余定理及其扩展"><a href="#§7-中国剩余定理及其扩展" class="headerlink" title="§7 中国剩余定理及其扩展"></a>§7 中国剩余定理及其扩展</h2><p><br></p>
-<h2 id="§8-欧拉函数-amp-扩展欧拉定理"><a href="#§8-欧拉函数-amp-扩展欧拉定理" class="headerlink" title="§8 欧拉函数&amp;扩展欧拉定理"></a>§8 欧拉函数&amp;扩展欧拉定理</h2><blockquote>
+<h2 id="§5-同余"><a href="#§5-同余" class="headerlink" title="§5 同余"></a>§5 同余</h2><blockquote>
+<h3 id="同余系基本定理"><a href="#同余系基本定理" class="headerlink" title="同余系基本定理"></a>同余系基本定理</h3></blockquote>
+<ol>
+<li><script type="math/tex">a\equiv b\pmod p</script> 表示 $a$ 与 $b$ 模 $p$ 同余，即 $a$ 和 $b$ 除以 $p$ 的余数相等； </li>
+<li>同余加减法：<script type="math/tex">(a\pm b)\mod p=((a\mod p)\pm (b\mod p))\mod p</script> ；</li>
+<li>同余乘法：<script type="math/tex">(a\times b)\mod p=((a\mod p)\times (b\mod p))\mod p</script> ；</li>
+<li>同余幂运算：<script type="math/tex">a^b\mod p=(a\mod p)^b\mod p</script> ；</li>
+<li>除法不满足同余性，需借助乘法逆元。</li>
+</ol>
+<blockquote>
+<h3 id="同余方程"><a href="#同余方程" class="headerlink" title="同余方程"></a>同余方程</h3></blockquote>
+<p>​    同余方程即形如 <script type="math/tex">ax\equiv b\pmod p</script> 的方程。显然有：<script type="math/tex">a\cdot x+p\cdot k=b</script> ，其中 $k$ 为任意整数。可以发现，同余方程被转化为二元一次不定方程，于是利用 $EXGCD$ 求解即可。</p>
+<p>​    最小正整数解：由不定方程的通解 <script type="math/tex">x=x_0+k\cdot \frac p {\gcd(a,p)}</script> 可知，若 $x_0$ 是同余方程的一组解，则该方程的最小正整数解为 <script type="math/tex">x_0\% \frac p {\gcd(a,p)}</script> 。注意：$x_0$ 可能为负数，写程序时记得加上模数转化为正数。</p>
+<blockquote>
+<h3 id="其他同余相关内容"><a href="#其他同余相关内容" class="headerlink" title="其他同余相关内容"></a>其他同余相关内容</h3></blockquote>
+<p>​    与同余相关的知识还有一些，包括：乘法逆元（§6）、中国剩余定理（§7）、二次剩余（§8）、离散对数（§9）、卢卡斯定理（§10）。</p>
+<p><br></p>
+<h2 id="§6-乘法逆元"><a href="#§6-乘法逆元" class="headerlink" title="§6 乘法逆元"></a>§6 乘法逆元</h2><blockquote>
+<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3></blockquote>
+<p>​    乘法逆元是乘法在同余系上的逆运算，也称为<strong>数论倒数</strong>。若 <script type="math/tex">ax\equiv1\pmod p</script> ，则称 $x$ 为模 $p$ 意义下的乘法逆元，记为 <script type="math/tex">a^{-1}</script> 或者 <script type="math/tex">inv(a)</script> 。可见，$a$ 的乘法逆元在同余乘法中起到了 <script type="math/tex">\frac1a</script> 的作用，因此需要做同余除法运算时，我们有 <script type="math/tex">(a/b)\mod p=(a\times b^{-1})\mod p</script> ，其中 $b^{-1}$ 为 $b$ 模 $p$ 的逆元。</p>
+<blockquote>
+<h3 id="乘法逆元存在的条件"><a href="#乘法逆元存在的条件" class="headerlink" title="乘法逆元存在的条件"></a>乘法逆元存在的条件</h3></blockquote>
+<p>​    将同余式 <script type="math/tex">ax\equiv1\pmod p</script> 转化为不定方程，得 <script type="math/tex">a\cdot x+p\cdot k=1</script> ，由裴蜀定理可知，不定方程有解当且仅当 <script type="math/tex">\gcd(a,p)=1</script> 。因此，当且仅当 <script type="math/tex">a\perp p</script> 时，$a$ 在模 $p$ 意义下存在乘法逆元。</p>
+<blockquote>
+<h3 id="求单值逆元的计算方法"><a href="#求单值逆元的计算方法" class="headerlink" title="求单值逆元的计算方法"></a>求单值逆元的计算方法</h3></blockquote>
+<ol>
+<li>转化为不定方程利用 $EXGCD$ 求解，该方法几乎不受限制，是最通用的方法；</li>
+<li>根据费马小定理：$a^{p-1}=a\cdot a^{p-2}\equiv 1\pmod p$ ，则得到 $a$ 模 $p$ 的逆元为 $a^{p-2}$ ，快速幂即可，该方法为最简单且最常用的方法，但需要特别注意费马小定理的<strong>使用条件</strong>：$p$ 为素数；</li>
+<li>根据欧拉定理：<script type="math/tex">a^{\phi(p)}=a\cdot a^{\phi(p)-1}\equiv 1\pmod p</script> ，则得到 $a$ 模 $p$ 的逆元 <script type="math/tex">a^{\phi(p)-1}</script> ，该方法不受模数为素数的限制，但需先求出模数 $p$ 的欧拉函数。</li>
+</ol>
+<blockquote>
+<h3 id="预处理阶乘逆元"><a href="#预处理阶乘逆元" class="headerlink" title="预处理阶乘逆元"></a>预处理阶乘逆元</h3></blockquote>
+<p>​    设 $(n+1)!$ 的逆元为 $x$ ，即 <script type="math/tex">(n+1)!\cdot x\equiv1\pmod p</script> ，则有 <script type="math/tex">n!\cdot((n+1)\cdot x)\equiv1\pmod p</script> 。于是得到阶乘逆元的递推关系：<script type="math/tex">inv(n!)=inv((n+1)!)\cdot (n+1)</script> ，$O(n)$ 倒序递推即可。</p>
+<blockquote>
+<h3 id="预处理逆元"><a href="#预处理逆元" class="headerlink" title="预处理逆元"></a>预处理逆元</h3></blockquote>
+<p>​    从1到 $n$ 所有数的逆元也能在 $O(n)$ 时间内预处理出来。</p>
+<p>​    假设所有小于 $i$ 的正整数的逆元已经求解，现求 $i$ 模 $p$ 的逆元 $(i<p)$ ：首先当 $i=1$ 时，有 $$1^{-1}\equiv1\pmod p$$；当 $i>1$ 时，设 <script type="math/tex">p=q\cdot i+r</script>  ，则 <script type="math/tex">q\cdot i+r\equiv0\pmod p</script> ，从而有 <script type="math/tex">q\cdot i\equiv -r\pmod p</script> 。等式两边同乘 <script type="math/tex">-i^{-1}\cdot r^{-1}</script> ，得 <script type="math/tex">i^{-1}\equiv -q\cdot r^{-1}\pmod p</script> ，即 <script type="math/tex">i^{-1}\equiv -\lfloor\frac p i\rfloor\cdot r^{-1}\pmod p</script> 。又因为 $0&lt;r&lt;i$  ，即 $r^{-1}$ 已知，则可以求解 $i^{-1}$ 。</p>
+<p><br></p>
+<h2 id="§7-中国剩余定理（CRT）及其扩展（EXCRT）"><a href="#§7-中国剩余定理（CRT）及其扩展（EXCRT）" class="headerlink" title="§7 中国剩余定理（CRT）及其扩展（EXCRT）"></a>§7 中国剩余定理（CRT）及其扩展（EXCRT）</h2><blockquote>
+<h3 id="CRT"><a href="#CRT" class="headerlink" title="CRT"></a>CRT</h3></blockquote>
+<p>​    设整数 <script type="math/tex">m_1,m_2,\cdots ,m_k</script> <strong>两两互质</strong>，则对任意整数 <script type="math/tex">a_1,a_2,\cdots ,a_k</script> ，线性同余方程组 <script type="math/tex">\begin{cases} x\equiv a_1\pmod {m_1} \\ x\equiv a_2\pmod {m_2} \\ \cdots \\ x\equiv a_k\pmod {m_k} \end{cases}</script> 有整数解，且该解在模 <script type="math/tex">M=\prod\limits_{i=1}^km_i</script> 时是唯一的，解为 <script type="math/tex">x\equiv a_1\cdot M_1\cdot M_1^{-1}+a_2\cdot M_2\cdot M_2^{-1}+\cdots+a_k\cdot M_k\cdot M_k^{-1}\pmod M</script> ，其中 <script type="math/tex">M_i=\frac M {m_i}</script> ，<script type="math/tex">M_i^{-1}\cdot M_i\equiv 1\pmod {m_i}</script> 。</p>
+<blockquote>
+<h3 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h3></blockquote>
+<p>​    将解中的每一项 <script type="math/tex">x_i=a_i\cdot M_i\cdot M_i^{-1}</script> 与每个方程 <script type="math/tex">x\equiv a_j\pmod {m_j}</script> 对应起来，容易发现：当 <script type="math/tex">i=j</script> 时，<script type="math/tex">x_i=a_i\cdot (M_i\cdot M_i^{-1})\equiv a_i\cdot1=a_i\pmod {m_i}</script> ，则 <script type="math/tex">x_i\equiv a_j\pmod {m_j}</script> ；而当 <script type="math/tex">i \neq j</script> 时，<script type="math/tex">M_i=\frac M{m_i}\equiv0\pmod {m_j}</script> ，故 <script type="math/tex">x_i=a_i\cdot M_i\cdot M_i^{-1}\equiv0\pmod {m_j}</script> 。从而 <script type="math/tex">x=\sum\limits_{i=1}^kx_i</script> 满足：当 <script type="math/tex">1\le i\le k</script> 时， <script type="math/tex">x\equiv a_i\pmod{m_i}</script> ，即 $x$ 为同余方程组的一个解。</p>
+<blockquote>
+<h3 id="EXCRT"><a href="#EXCRT" class="headerlink" title="EXCRT"></a>EXCRT</h3></blockquote>
+<p>​    将上述相同问题扩展到 <script type="math/tex">m_1,m_2,\cdots ,m_k</script> <strong>不一定两两互质</strong>的情况。在这种情况下，$M_i$ 与 $m_i$ 不一定互质，因此 $M_i$ 的逆元不一定存在，则无法通过上述方法得到解了。</p>
+<p>​    考虑每次将一个方程与已经求解的方程组合并：假设已经求出了前 $n-1$ 个方程组成的同余方程组的一个解 $x<em>{n-1}$ ，且 $$M=lcm(m_1,m_2,\cdots,m</em>{n-1})<script type="math/tex">。则考虑加入第 $n$ 个方程后，我们需要找到一个 $x_n$ ，满足</script>x<em>n=x</em>{n-1}+t\cdot M\equiv a<em>n\pmod{m_n}<script type="math/tex">，其中 $t$ 为任意整数。变形可得</script>t\cdot M\equiv a_n-x</em>{n-1}\pmod{m_n}$$ ，转化为不定方程用 $EXGCD$ 求解，若不定方程无解则同余方程组无解。</p>
+<p>​    于是依次将 $k$ 个方程按上述方法合并即可。</p>
+<p><br></p>
+<h2 id="§8-二次剩余"><a href="#§8-二次剩余" class="headerlink" title="§8 二次剩余"></a>§8 二次剩余</h2><p><br></p>
+<h2 id="§9-离散对数"><a href="#§9-离散对数" class="headerlink" title="§9 离散对数"></a>§9 离散对数</h2><p><br></p>
+<h2 id="§10-卢卡斯定理及其扩展"><a href="#§10-卢卡斯定理及其扩展" class="headerlink" title="§10 卢卡斯定理及其扩展"></a>§10 卢卡斯定理及其扩展</h2><p><br></p>
+<h2 id="§11-欧拉函数-amp-扩展欧拉定理"><a href="#§11-欧拉函数-amp-扩展欧拉定理" class="headerlink" title="§11 欧拉函数&amp;扩展欧拉定理"></a>§11 欧拉函数&amp;扩展欧拉定理</h2><blockquote>
 <h3 id="欧拉函数"><a href="#欧拉函数" class="headerlink" title="欧拉函数"></a>欧拉函数</h3></blockquote>
 <p>​    正整数 $n$ 的欧拉函数等于不超过 $n$ 且与 $n$ 互质的正整数个数，记作 $\phi(n)$ 。即 $\phi(x)=\sum\limits_{i=1}^n[\gcd(i,n)=1]$ 。</p>
 <p>​    根据欧拉函数的定义易知，对任意质数 $p$ ，有 <script type="math/tex">\phi(p)=p-1</script> 。而 $p^k$ 与除 $p$ 的倍数以外的数都互质，则有 <script type="math/tex">\phi(p^k)=p^k-p^{k-1}=p^k(1-\frac 1p)</script> 。又因为欧拉函数是积性函数，当 $a\perp b$ 时，满足 $\phi(ab)=\phi(a)\cdot\phi(b)$ ，则对任意正整数 $n$ ，有 <script type="math/tex">\phi(n)=\prod\limits_{i=1}^k\phi(p_i^{e_i})=n\prod\limits_{i=1}^k(1-\frac1{p_i})</script> ，其中 $n$ 的唯一分解为 $n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}$ 。</p>
@@ -199,17 +255,17 @@
 <p>​    假设 $a$ 的唯一分解为：<script type="math/tex">a=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}=\prod\limits_{i=1}^kp_i^{e_i}</script> ，则根据同余定理，有 <script type="math/tex">a^b=\prod\limits_{i=1}^k (p_i^{e_i})^b\equiv\prod\limits_{i=1}^k(p_i^{e_i})^{b\bmod \phi(m )+\phi(m)}=(\prod\limits_{i=1}^kp_i^{e_i})^{b\bmod \phi(m )+\phi(m)}=a^{b\bmod \phi(m )+\phi(m)}\pmod m</script> 。</p>
 <blockquote>
 <h3 id="欧拉降幂"><a href="#欧拉降幂" class="headerlink" title="欧拉降幂"></a>欧拉降幂</h3></blockquote>
-<p>​    综合上述EX欧拉定理，可得到欧拉降幂公式：</p>
-<p>​    <script type="math/tex">a^b\equiv\begin{cases} a^{b\bmod \phi(m)} &,b<\phi(m)\\ a^{b \bmod \phi(m)+\phi(m)}&,b\ge \phi(m) \end{cases}\pmod m</script></p>
+<p>​    综合上述扩展欧拉定理，可得到<strong>欧拉降幂</strong>公式：</p>
+<p>​    <script type="math/tex">a^b\equiv\begin{cases} a^{b\bmod \phi(m)} &,b<\phi(m)\\ a^{b \bmod \phi(m)+\phi(m)}&,b\ge \phi(m) \end{cases}\pmod m</script> 。</p>
 <p><br></p>
-<h2 id="§9-数论函数-amp-狄利克雷卷积"><a href="#§9-数论函数-amp-狄利克雷卷积" class="headerlink" title="§9 数论函数&amp;狄利克雷卷积"></a>§9 数论函数&amp;狄利克雷卷积</h2><blockquote>
+<h2 id="§12-数论函数-amp-狄利克雷卷积"><a href="#§12-数论函数-amp-狄利克雷卷积" class="headerlink" title="§12 数论函数&amp;狄利克雷卷积"></a>§12 数论函数&amp;狄利克雷卷积</h2><blockquote>
 <h3 id="数论函数"><a href="#数论函数" class="headerlink" title="数论函数"></a>数论函数</h3></blockquote>
 <p>​    若一个函数的定义域为正整数集而值域为整数集，则称该函数为<strong>数论函数</strong>。</p>
 <blockquote>
 <h3 id="积性函数及其性质"><a href="#积性函数及其性质" class="headerlink" title="积性函数及其性质"></a>积性函数及其性质</h3></blockquote>
 <p>​    对于数论函数 $f(x)$ ，若对 $\forall a,b\in Z^+$ 且 $a\perp b$ 满足 $f(ab)=f(a)\cdot f(b)$ ，则称 $f(x)$ 为积性函数；若对 $\forall a,b\in Z^+$ 满足 $f(ab)=f(a)\cdot f(b)$ ，则称 $f(x)$ 为完全积性函数。</p>
 <p>​    若 $f(x)$ 是积性函数，且 $x$ 的唯一分解为 <script type="math/tex">x=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}</script> ，则显然有 <script type="math/tex">f(x)=\prod\limits_{i=1}^k f(p_i^{e_i})</script>。</p>
-<p>​    若 $f(x)$ 是积性函数，则 $f$ 的和函数 $F(x)=\sum\limits_{d|x}f(d)$ 也是积性函数。</p>
+<p>​    若 $f(x)$ 是积性函数，则 $f$ 的和函数 $F(x)=\sum\limits_{d\mid x}f(d)$ 也是积性函数。</p>
 <p>​    若 $f(x)、g(x)$ 都是积性函数，则它们的卷积 $(f*g)(x)$ 也是积性函数。</p>
 <blockquote>
 <h3 id="常见积性函数"><a href="#常见积性函数" class="headerlink" title="常见积性函数"></a>常见积性函数</h3></blockquote>
@@ -220,7 +276,7 @@
 </li>
 <li><p>单位函数：$\epsilon(x)=[x==1]$ ；</p>
 </li>
-<li><p>除数函数：$\sigma(x,k)=\sum\limits_{i|x}^xd^k$ ：</p>
+<li><p>除数函数：$\sigma(x,k)=\sum\limits_{i\mid x}^xd^k$ ：</p>
 <p>当 $k=0$ 时，$\sigma(x,0)$ 表示 $x$ 的因子个数；</p>
 <p>当 $k=1$ 时，$\sigma(x,1)$ 表示 $x$ 的因子之和。</p>
 </li>
@@ -231,7 +287,7 @@
 </ol>
 <blockquote>
 <h3 id="狄利克雷卷积及其性质"><a href="#狄利克雷卷积及其性质" class="headerlink" title="狄利克雷卷积及其性质"></a>狄利克雷卷积及其性质</h3></blockquote>
-<p>​    定义两个<strong>数论函数</strong> $f、g$ 狄利克雷卷积为 <script type="math/tex">(f*g)(n)=\sum\limits_{d|n}^nf(d)g(\frac nd)</script> 。</p>
+<p>​    定义两个<strong>数论函数</strong> $f、g$ 狄利克雷卷积为 <script type="math/tex">(f*g)(n)=\sum\limits_{d\mid n}^nf(d)g(\frac nd)</script> 。</p>
 <p>​    狄利克雷卷积满足：</p>
 <ol>
 <li>交换律：<script type="math/tex">f*g=g*f</script> ；</li>
@@ -246,35 +302,40 @@
 <li><p><script type="math/tex">\mu *I=\epsilon</script> ，即 $\mu$ 与 $I$ 互为逆元；</p>
 </li>
 <li><script type="math/tex">\phi *I=id</script> ；</li>
-<li><script type="math/tex">\mu*id=\phi</script> ，即 <script type="math/tex">\phi(n)=\sum\limits_{d|n}\mu(d)\frac nd</script> ，从而有 <script type="math/tex">\frac {\phi(n)}n=\sum\limits_{d|n}\frac{\mu(d)}d</script>；</li>
+<li><script type="math/tex">\mu*id=\phi</script> ，即 <script type="math/tex">\phi(n)=\sum\limits_{d\mid n}\mu(d)\frac nd</script> ，从而有 <script type="math/tex">\frac {\phi(n)}n=\sum\limits_{d\mid n}\frac{\mu(d)}d</script>；</li>
 <li><script type="math/tex">I*I=d</script> ，$d(n)$ 为 $n$ 的因子个数；</li>
 <li><script type="math/tex">id*I=\sigma</script> ，$\sigma(n)$ 为 $n$ 的因子之和。</li>
 </ol>
 <p><br></p>
-<h2 id="§10-整除分块"><a href="#§10-整除分块" class="headerlink" title="§10 整除分块"></a>§10 整除分块</h2><blockquote>
+<h2 id="§13-整除分块"><a href="#§13-整除分块" class="headerlink" title="§13 整除分块"></a>§13 整除分块</h2><blockquote>
 <h3 id="整除分块解决的问题"><a href="#整除分块解决的问题" class="headerlink" title="整除分块解决的问题"></a>整除分块解决的问题</h3></blockquote>
 <p>​    求：<script type="math/tex">\sum\limits_{i=1}^n\lfloor \frac n i\rfloor</script> ，<script type="math/tex">n\leq10^{12}</script>。</p>
+<blockquote>
+<h3 id="问题求解"><a href="#问题求解" class="headerlink" title="问题求解"></a>问题求解</h3></blockquote>
 <p>​    显然暴力计算是 <script type="math/tex">O(n)</script> 的，观察可发现当 $i$ 较大时，对于一段连续的 $i$ ，<script type="math/tex">\lfloor \frac n i \rfloor</script> 的值可能相等，于是考虑利用分块的思想，将相同的值一起计算。</p>
 <p>​    通过一些数学知识和推理，可以发现对任意 $i$ ，设 <script type="math/tex">r=\lfloor \frac n {\lfloor \frac n i \rfloor} \rfloor</script> ，则有 <script type="math/tex">\lfloor \frac n i \rfloor=\lfloor \frac n r \rfloor</script> 且  <script type="math/tex">\lfloor \frac n i \rfloor<\lfloor \frac n {r+1} \rfloor</script> 。于是对于每一个相等的 <script type="math/tex">\lfloor \frac n i \rfloor</script> 对应的 $i$ 的区间 $[l,r]$，可以 $O(1)$ 找到区间右端点 $r$ 。而 <script type="math/tex">\lfloor \frac n i \rfloor</script> 最多有 $2\sqrt n$ 个不同的值，因此复杂度为 $O(\sqrt n)$ 。</p>
 <blockquote>
-<h3 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h3></blockquote>
+<h3 id="证明-1"><a href="#证明-1" class="headerlink" title="证明"></a>证明</h3></blockquote>
 <p>​    设 <script type="math/tex">k=\lfloor\frac n i \rfloor</script> 且 <script type="math/tex">k=\lfloor\frac n {i'} \rfloor</script> 其中 $i’=i+d$ ，则 <script type="math/tex">ki+q=n</script>，<script type="math/tex">k(i+d)+q'=n</script> ，进而 <script type="math/tex">q'=q-dk</script> 。由于 <script type="math/tex">q'>0</script> ，则 <script type="math/tex">d_{max}=\lfloor \frac q k\rfloor</script> ，所以有 <script type="math/tex">i'_{max}=i+\lfloor \frac q k\rfloor</script> ，又有 <script type="math/tex">q=n-\lfloor \frac n i\rfloor*i</script> 。</p>
 <p>​    从而 <script type="math/tex">i'_{max}=i+\lfloor \frac {n-\lfloor \frac n i\rfloor*i} {\lfloor \frac n i\rfloor}\rfloor=\lfloor\frac{\lfloor \frac n i\rfloor*i+n-\lfloor \frac n i\rfloor*i}{\lfloor \frac n i\rfloor} \rfloor=\lfloor \frac n {\lfloor \frac n i\rfloor}\rfloor</script> 。</p>
+<blockquote>
+<h3 id="二维整除分块"><a href="#二维整除分块" class="headerlink" title="二维整除分块"></a>二维整除分块</h3></blockquote>
+<p>​    暂鸽。</p>
 <p><br></p>
-<h2 id="§11-反演"><a href="#§11-反演" class="headerlink" title="§11 反演"></a>§11 反演</h2><blockquote>
+<h2 id="§14-反演"><a href="#§14-反演" class="headerlink" title="§14 反演"></a>§14 反演</h2><blockquote>
 <h3 id="莫比乌斯反演"><a href="#莫比乌斯反演" class="headerlink" title="莫比乌斯反演"></a>莫比乌斯反演</h3></blockquote>
-<p>​    若 $f$ 是数论函数，$g$ 是 $f$ 的和函数，即 <script type="math/tex">g(n)=\sum\limits_{d|n}f(d)</script> ，则对任意正整数 $n$ ，有 <script type="math/tex">f(n)=\sum\limits_{d|n}\mu(d)g(\frac nd)</script> 。</p>
+<p>​    若 $f$ 是数论函数，$g$ 是 $f$ 的和函数，即 <script type="math/tex">g(n)=\sum\limits_{d\mid n}f(d)</script> ，则对任意正整数 $n$ ，有 <script type="math/tex">f(n)=\sum\limits_{d\mid n}\mu(d)g(\frac nd)</script> 。</p>
 <p>​    利用狄利克雷卷积可简单证明：</p>
-<p>​    将 <script type="math/tex">g(n)=\sum\limits_{d|n}f(d)</script> 表示成卷积形式，即为 <script type="math/tex">g=f*I</script> ，等式两边同时卷上 $\mu$ ，得 <script type="math/tex">g*\mu=f*I*\mu</script> ，于是有 <script type="math/tex">f*(I*\mu)=f*\epsilon=f=g*\mu</script> ，即 <script type="math/tex">f(n)=\sum\limits_{d|n}g(d)\mu(\frac nd)</script> ；同时也可得到另一形式 <script type="math/tex">f(n)=\sum\limits_{d|n}\mu(d)g(\frac nd)</script> 。</p>
+<p>​    将 <script type="math/tex">g(n)=\sum\limits_{d\mid n}f(d)</script> 表示成卷积形式，即为 <script type="math/tex">g=f*I</script> ，等式两边同时卷上 $\mu$ ，得 <script type="math/tex">g*\mu=f*I*\mu</script> ，于是有 <script type="math/tex">f*(I*\mu)=f*\epsilon=f=g*\mu</script> ，即 <script type="math/tex">f(n)=\sum\limits_{d\mid n}g(d)\mu(\frac nd)</script> ；同时也可得到另一形式 <script type="math/tex">f(n)=\sum\limits_{d\mid n}\mu(d)g(\frac nd)</script> 。</p>
 <blockquote>
 <h3 id="莫比乌斯的因数反演与倍数反演"><a href="#莫比乌斯的因数反演与倍数反演" class="headerlink" title="莫比乌斯的因数反演与倍数反演"></a>莫比乌斯的因数反演与倍数反演</h3></blockquote>
-<p>​    因数反演公式即上述公式：设<script type="math/tex">g(n)=\sum\limits_{d|n}f(d)</script> ，则有 <script type="math/tex">f(n)=\sum\limits_{d|n}\mu(d)g(\frac nd)</script> 。</p>
-<p>​    然而有更为常用的倍数反演公式：设<script type="math/tex">g(n)=\sum\limits_{n|d}f(d)</script> ，则有 <script type="math/tex">f(n)=\sum\limits_{n|d}\mu(\frac d n)g(d)</script> 。</p>
+<p>​    因数反演公式即上述公式：设<script type="math/tex">g(n)=\sum\limits_{d\mid n}f(d)</script> ，则有 <script type="math/tex">f(n)=\sum\limits_{d\mid n}\mu(d)g(\frac nd)</script> 。</p>
+<p>​    然而有更为常用的倍数反演公式：设<script type="math/tex">g(n)=\sum\limits_{n\mid d}f(d)</script> ，则有 <script type="math/tex">f(n)=\sum\limits_{n\mid d}\mu(\frac d n)g(d)</script> 。</p>
 <blockquote>
 <h3 id="莫比乌斯反演例题"><a href="#莫比乌斯反演例题" class="headerlink" title="莫比乌斯反演例题"></a>莫比乌斯反演例题</h3></blockquote>
 <ol>
 <li><p>求：<script type="math/tex">\sum\limits_{i=1}^n\sum\limits_{j=1}^m[\gcd(i,j)=k]</script> ，<script type="math/tex">\max(m,n)\le10^5</script> 。</p>
-<p>利用 <script type="math/tex">\mu*1=\epsilon</script> 进行反演：<script type="math/tex">\sum\limits_{i=1}^n\sum\limits_{j=1}^m[\gcd(i,j)=k]=\sum\limits_{i=1}^{\lfloor\frac nk\rfloor}\sum\limits_{j=1}^{\lfloor\frac mk\rfloor}[\gcd(i,j)=1]=\sum\limits_{i=1}^{\lfloor\frac nk\rfloor}\sum\limits_{j=1}^{\lfloor\frac mk\rfloor}\sum\limits_{d|\gcd(i,j)}\mu(d)</script> 。将 $GCD$ 提出来换到外层枚举，化为： <script type="math/tex">\sum\limits_{d=1}^{\min(n,m)}\mu(d)\sum\limits_{d|i}^{\lfloor\frac nk\rfloor}\sum\limits_{d|j}^{\lfloor\frac mk\rfloor}1=\sum\limits_{d=1}^{\min(n,m)}\mu(d)\sum\limits_{i=1}^{\lfloor\frac n{kd}\rfloor}\sum\limits_{j=1}^{\lfloor\frac m{kd}\rfloor}1=\sum\limits_{d=1}^{\min(n,m)}\mu(d)\lfloor\frac n{kd}\rfloor\lfloor\frac m{kd}\rfloor</script> 。整除分块即可。</p>
+<p>利用 <script type="math/tex">\mu*1=\epsilon</script> 进行反演：<script type="math/tex">\sum\limits_{i=1}^n\sum\limits_{j=1}^m[\gcd(i,j)=k]=\sum\limits_{i=1}^{\lfloor\frac nk\rfloor}\sum\limits_{j=1}^{\lfloor\frac mk\rfloor}[\gcd(i,j)=1]=\sum\limits_{i=1}^{\lfloor\frac nk\rfloor}\sum\limits_{j=1}^{\lfloor\frac mk\rfloor}\sum\limits_{d\mid \gcd(i,j)}\mu(d)</script> 。将 $GCD$ 提出来换到外层枚举，化为： <script type="math/tex">\sum\limits_{d=1}^{\min(n,m)}\mu(d)\sum\limits_{d\mid i}^{\lfloor\frac nk\rfloor}\sum\limits_{d\mid j}^{\lfloor\frac mk\rfloor}1=\sum\limits_{d=1}^{\min(n,m)}\mu(d)\sum\limits_{i=1}^{\lfloor\frac n{kd}\rfloor}\sum\limits_{j=1}^{\lfloor\frac m{kd}\rfloor}1=\sum\limits_{d=1}^{\min(n,m)}\mu(d)\lfloor\frac n{kd}\rfloor\lfloor\frac m{kd}\rfloor</script> 。整除分块即可。</p>
 </li>
 </ol>
 <ol>
@@ -282,15 +343,17 @@
 </ol>
 <blockquote>
 <h3 id="欧拉反演"><a href="#欧拉反演" class="headerlink" title="欧拉反演"></a>欧拉反演</h3></blockquote>
-<p>​    利用欧拉函数的一条性质：<script type="math/tex">n=\sum\limits_{d|n}\phi(d)</script> ，将 $n$ 换成 <script type="math/tex">\gcd(i,j)</script> ，可得 <script type="math/tex">\gcd(i,j)=\sum\limits_{d|\gcd(i,j)}\phi(d)=\sum\limits_{d|i}\sum\limits_{d|j}\phi(d)</script> 。</p>
+<p>​    利用欧拉函数的一条性质：<script type="math/tex">n=\sum\limits_{d\mid n}\phi(d)</script> ，将 $n$ 换成 <script type="math/tex">\gcd(i,j)</script> ，可得 <script type="math/tex">\gcd(i,j)=\sum\limits_{d\mid \gcd(i,j)}\phi(d)=\sum\limits_{d\mid i}\sum\limits_{d\mid j}\phi(d)</script> 。</p>
 <blockquote>
 <h3 id="欧拉反演例题"><a href="#欧拉反演例题" class="headerlink" title="欧拉反演例题"></a>欧拉反演例题</h3></blockquote>
 <p>​    求：<script type="math/tex">\sum\limits_{i=1}^n\gcd(i,n)</script> ，<script type="math/tex">n\leq10^{12}</script>。</p>
-<p>​    利用上述反演公式，可得 <script type="math/tex">\sum\limits_{i=1}^n\gcd(i,n)=\sum\limits_{i=1}^n\sum\limits_{d|i}\sum\limits_{d|n}\phi(d)=\sum\limits_{d|n}\sum\limits_{i=1}^n\sum\limits_{d|i}\phi(d)=\sum\limits_{d|n}\phi(d)\sum\limits_{i=1}^n[d|i]</script> 。即对于每个 $d$ 而言， 当且仅当 $i$ 是 $d$ 的倍数时，产生 <script type="math/tex">\phi(d)</script> 的贡献。而不超过 $n$ 的数中 $d$ 的倍数有 $\frac nd$ 个，故 <script type="math/tex">\sum\limits_{i=1}^n\gcd(i,n)=\sum\limits_{d|n}\frac n d\phi(d)</script> 。<script type="math/tex">O(\sqrt n)</script> 枚举因数即可。</p>
+<p>​    利用上述反演公式，可得 <script type="math/tex">\sum\limits_{i=1}^n\gcd(i,n)=\sum\limits_{i=1}^n\sum\limits_{d\mid i}\sum\limits_{d\mid n}\phi(d)=\sum\limits_{d\mid n}\sum\limits_{i=1}^n\sum\limits_{d\mid i}\phi(d)=\sum\limits_{d\mid n}\phi(d)\sum\limits_{i=1}^n[d\mid i]</script> 。即对于每个 $d$ 而言， 当且仅当 $i$ 是 $d$ 的倍数时，产生 <script type="math/tex">\phi(d)</script> 的贡献。而不超过 $n$ 的数中 $d$ 的倍数有 $\frac nd$ 个，故 <script type="math/tex">\sum\limits_{i=1}^n\gcd(i,n)=\sum\limits_{d\mid n}\frac n d\phi(d)</script> 。<script type="math/tex">O(\sqrt n)</script> 枚举因数即可。</p>
 <p><br></p>
-<h2 id="§12-杜教筛"><a href="#§12-杜教筛" class="headerlink" title="§12 杜教筛"></a>§12 杜教筛</h2><blockquote>
+<h2 id="§15-杜教筛"><a href="#§15-杜教筛" class="headerlink" title="§15 杜教筛"></a>§15 杜教筛</h2><blockquote>
 <h3 id="杜教筛解决的问题"><a href="#杜教筛解决的问题" class="headerlink" title="杜教筛解决的问题"></a>杜教筛解决的问题</h3></blockquote>
 <p>​    杜教筛可以在低于线性的时间复杂度内计算积性函数的<strong>前缀和</strong>，即求：<script type="math/tex">S(n)=\sum\limits_{i=1}^nf(i)</script> ，<script type="math/tex">n\le10^{10}</script> 其中 $f$ 为积性函数。</p>
+<blockquote>
+<h3 id="问题求解-1"><a href="#问题求解-1" class="headerlink" title="问题求解"></a>问题求解</h3></blockquote>
 <p>​    为了解决这个问题，我们需要构造出一个积性函数 $g$ ，设 <script type="math/tex">h=f*g</script> ，则 $h$ 的前缀和为 <script type="math/tex">\sum\limits_{i=1}^nh(i)=\sum\limits_{i=1}^n(f*g)(i)=\sum\limits_{i=1}^n\sum\limits_{d|i}f(\frac i d)g(d)</script> 。交换枚举顺序将 $g(d)$ 提出来，则 <script type="math/tex">\sum\limits_{i=1}^nh(i)=\sum\limits_{d=1}^ng(d)\sum\limits_{i=1}^{\lfloor\frac n d\rfloor}f(i)=\sum\limits_{d=1}^ng(d)\cdot S({\lfloor\frac n d\rfloor})</script> 。将第一项提出来，得 <script type="math/tex">\sum\limits_{i=1}^nh(i)=g(1)\cdot S(n)+\sum\limits_{d=2}^ng(d)\cdot S({\lfloor\frac n d\rfloor})</script> ，从而有 <script type="math/tex">S(n)=\frac 1{g(1)}[\sum\limits_{i=1}^nh(i)-\sum\limits_{d=2}^ng(d)\cdot S({\lfloor\frac n d\rfloor})]</script> ，这就是杜教筛的<strong>套路公式</strong>。</p>
 <p>​    于是，只要当 $h(i)$ 的前缀和能在短时间内求出，再对后面的式子进行整除分块即可。</p>
 <p>​    注意：1. 递归求解的时候记忆化；2. 线性筛预处理前 <script type="math/tex">n^{\frac 2 3}</script> 个前缀和。这样一来，求解 $S(n)$ 的复杂度可以达到 <script type="math/tex">O(n^{\frac 23})</script> 。</p>
@@ -299,14 +362,25 @@
 <h3 id="求莫比乌斯函数的前缀和"><a href="#求莫比乌斯函数的前缀和" class="headerlink" title="求莫比乌斯函数的前缀和"></a>求莫比乌斯函数的前缀和</h3></blockquote>
 <p>​    即求：<script type="math/tex">S(n)=\sum\limits_{i=1}^n\mu(i)</script> 。综合狄利克雷卷积的知识，有 <script type="math/tex">\epsilon=\mu*I</script> ，而 $\epsilon$ 的前缀和又非常好求，即为1，并且 $I$ 也方便参与整除分块的计算。于是可以带入上述式子，得到 <script type="math/tex">S(n)=1-\sum\limits_{d=2}^nS({\lfloor\frac n d\rfloor})]</script> 。</p>
 <blockquote>
-<h3 id="求欧拉函数的额前缀和"><a href="#求欧拉函数的额前缀和" class="headerlink" title="求欧拉函数的额前缀和"></a>求欧拉函数的额前缀和</h3></blockquote>
+<h3 id="求欧拉函数的前缀和"><a href="#求欧拉函数的前缀和" class="headerlink" title="求欧拉函数的前缀和"></a>求欧拉函数的前缀和</h3></blockquote>
 <p>​    即求：<script type="math/tex">S(n)=\sum\limits_{i=1}^n\phi(i)</script> 。同理，有 <script type="math/tex">id=\phi*I</script> ，而 $id$ 的前缀和即 <script type="math/tex">\sum\limits_{i=1}^ni=\frac{(n+1)n}2</script> 。带入套路公式可得 <script type="math/tex">S(n)=\sum\limits_{i=1}^ni-\sum\limits_{d=2}^nS({\lfloor\frac n d\rfloor})]</script> 。</p>
 <blockquote>
 <h3 id="求奇怪函数的前缀和"><a href="#求奇怪函数的前缀和" class="headerlink" title="求奇怪函数的前缀和"></a>求奇怪函数的前缀和</h3></blockquote>
-<p>​    求：<script type="math/tex">S(n)=\sum\limits_{i=1}^ni\cdot \phi(i)</script> 。此时可能没法迅速找到合适的 $h$ 了，先考虑卷积的式子：<script type="math/tex">h(n)=(f*g)(n)=\sum\limits_{d|n}d\cdot\phi(d)\cdot g(\frac nd)</script> 。这里单独的 $d$ 不易处理，所以我们希望从 $g$ 中得到 $\frac1d$ ，从而能把 $d$ 消去。考虑令 $g$ 为 $id$ ，则原式可化为：<script type="math/tex">\sum\limits_{d|n}d\cdot \phi(d) \cdot \frac n d=n\sum\limits_{d|n}\phi(d)=n^2</script> 。这时可以发现， $h$ 已经找到了，且 $id$ 也容易进行整除分块，于是带回杜教筛的套路式，可得 <script type="math/tex">S(n)=\sum\limits_{i=1}^ni^2-\sum\limits_{d=2}^nd\cdot S({\lfloor\frac n d\rfloor})]</script> 。</p>
+<p>​    求：<script type="math/tex">S(n)=\sum\limits_{i=1}^ni\cdot \phi(i)</script> 。此时可能没法迅速找到合适的 $h$ 了，先考虑卷积的式子：<script type="math/tex">h(n)=(f*g)(n)=\sum\limits_{d\mid n}d\cdot\phi(d)\cdot g(\frac nd)</script> 。这里单独的 $d$ 不易处理，所以我们希望从 $g$ 中得到 $\frac1d$ ，从而能把 $d$ 消去。考虑令 $g$ 为 $id$ ，则原式可化为：<script type="math/tex">\sum\limits_{d\mid n}d\cdot \phi(d) \cdot \frac n d=n\sum\limits_{d\mid n}\phi(d)=n^2</script> 。这时可以发现， $h$ 已经找到了，且 $id$ 也容易进行整除分块，于是带回杜教筛的套路式，可得 <script type="math/tex">S(n)=\sum\limits_{i=1}^ni^2-\sum\limits_{d=2}^nd\cdot S({\lfloor\frac n d\rfloor})]</script> 。</p>
 <p>​    杜教筛还能求如 <script type="math/tex">\sum\limits_{i=1}^ni^2\cdot \mu(i)</script> 一类的奇怪积性函数的前缀和，可以参考上述思路。</p>
 <p><br></p>
-<h2 id="§13-Min-25筛"><a href="#§13-Min-25筛" class="headerlink" title="§13 Min_25筛"></a>§13 Min_25筛</h2><h2 id="§13-卢卡斯定理及其扩展"><a href="#§13-卢卡斯定理及其扩展" class="headerlink" title="§13 卢卡斯定理及其扩展"></a>§13 卢卡斯定理及其扩展</h2><h2 id="§14-离散对数"><a href="#§14-离散对数" class="headerlink" title="§14 离散对数"></a>§14 离散对数</h2><h2 id="§15-二次剩余"><a href="#§15-二次剩余" class="headerlink" title="§15 二次剩余"></a>§15 二次剩余</h2><h2 id="§16-原根"><a href="#§16-原根" class="headerlink" title="§16 原根"></a>§16 原根</h2><h2 id="§6-类欧几里得算法"><a href="#§6-类欧几里得算法" class="headerlink" title="§6 类欧几里得算法"></a>§6 类欧几里得算法</h2><h2 id="§6-N次剩余"><a href="#§6-N次剩余" class="headerlink" title="§6 N次剩余"></a>§6 N次剩余</h2> 
+<h2 id="§16-Min-25筛"><a href="#§16-Min-25筛" class="headerlink" title="§16 Min_25筛"></a>§16 Min_25筛</h2><blockquote>
+<h3 id="Min-25筛解决的问题"><a href="#Min-25筛解决的问题" class="headerlink" title="Min_25筛解决的问题"></a>Min_25筛解决的问题</h3></blockquote>
+<p>​    Min_25筛可以在低于线性的时间复杂度内计算积性函数的<strong>前缀和</strong>，听起来挺熟悉，但Min_25筛处理的积性函数需要满足一定条件，且Min_25筛相对于杜教筛而言更加灵活。</p>
+<p>​    Min_25筛的使用条件是：1. 积性函数 $f$ 满足当 $p$ 为质数时，$f(p)$ 是关于 $p$ 的<strong>多项式</strong>；2. 当 $p$ 为质数时，<script type="math/tex">f(p^k)</script> 能够快速求值。</p>
+<blockquote>
+<h3 id="问题求解-2"><a href="#问题求解-2" class="headerlink" title="问题求解"></a>问题求解</h3></blockquote>
+<p>​        按质数和合数分类：</p>
+<p><br></p>
+<h2 id="§17-原根"><a href="#§17-原根" class="headerlink" title="§17 原根"></a>§17 原根</h2><p><br></p>
+<h2 id="§18-类欧几里得算法"><a href="#§18-类欧几里得算法" class="headerlink" title="§18 类欧几里得算法"></a>§18 类欧几里得算法</h2><p>​    不会。</p>
+<p><br></p>
+ 
       <!-- reward -->
       
     </div>
